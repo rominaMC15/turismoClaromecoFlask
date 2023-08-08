@@ -23,7 +23,7 @@ class Producto(db.Model):   # la clase Producto hereda de db.Model
         self.mail=mail
         self.mensaje=mensaje
  
-db.create_all()  # crea las tablas
+#db.create_all()  # crea las tablas
 #  ************************************************************
  
 class ProductoSchema(ma.Schema):
@@ -84,5 +84,8 @@ def update_producto(id):
  
  
 # programa principal *******************************
-if __name__=='__main__':  
+if __name__=='__main__':
+
+    with app.app_context():
+        db.create_all()  
     app.run(debug=True, port=5000)
