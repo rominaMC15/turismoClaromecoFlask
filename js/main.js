@@ -7,7 +7,8 @@ if (document.getElementById("app")) {
             loading: true
         },
         created() {
-            var url = 'http://localhost:5000/mensajes'
+            //var url = 'http://localhost:5000/mensajes'
+            var url = "https://turismoclaromeco.onrender.com/mensajes"
             this.fetchData(url)
         },
         methods: {
@@ -23,7 +24,8 @@ if (document.getElementById("app")) {
                     })
             },
             eliminar(producto) {
-                const url = 'http://localhost:5000/mensajes/' + producto;
+                //const url = 'http://localhost:5000/mensajes/' + producto;
+                const url = 'https://turismoclaromeco.onrender.com/mensajes/' + producto;
                 var options = {
                     method: 'DELETE',
                 }

@@ -9,7 +9,8 @@ function guardar() {
         mail: p,
         mensaje: s
     }
-    let url = "http://localhost:5000/mensajes"
+    //let url = "http://localhost:5000/mensajes"
+    let url = "https://turismoclaromeco.onrender.com/mensajes"
     var options = {
         body: JSON.stringify(producto),
         method: 'POST',

@@ -20,7 +20,8 @@ function modificar() {
         mail: p,
         mensaje: s
     }
-    let url = "http://localhost:5000/mensajes/"+id
+    //let url = "http://localhost:5000/mensajes/"+id
+    let url = "https://turismoclaromeco.onrender.com/mensajes/"+id
     var options = {
         body: JSON.stringify(producto),
         method: 'PUT',
