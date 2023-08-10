@@ -115,3 +115,46 @@ function guardar() {
     }
     
 }
+
+// function login() {
+//     let acceso = document.getElementsByClassName('btnAcceso')[0];
+    
+//     acceso.addEventListener("click", function() {
+//         alert("hola");
+//     });
+// }
+
+// login();
+
+document.addEventListener("DOMContentLoaded", function() {
+    const accesoBtn = document.querySelector('.btnAcceso');
+    const loginContainer = document.getElementById('loginContainer');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const loginForm = document.querySelector('.login-form');
+  
+    accesoBtn.addEventListener("click", function() {
+      loginContainer.classList.toggle('active');
+    });
+  
+    cancelBtn.addEventListener("click", function() {
+      loginContainer.classList.remove('active');
+    });
+  
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+  
+      const usuarioInput = loginForm.querySelector('input[type="text"]');
+      const contraseñaInput = loginForm.querySelector('input[type="password"]');
+  
+      const usuario = usuarioInput.value;
+      const contraseña = contraseñaInput.value;
+  
+      if (usuario === "admin" && contraseña === "1234") {
+        window.location.href = "back.html";
+      } else {
+        alert("Usuario o contraseña incorrectos");
+      }
+    });
+  });
+  
+

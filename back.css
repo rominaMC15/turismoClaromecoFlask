@@ -8,3 +8,22 @@
 body{
     background-color:rgb(231, 202, 121);
 }
+
+a{
+    text-align: center;
+    color: rgb(51, 238, 14);
+    background-color: black;
+    font-family: 'Amaranth', sans-serif;
+    font-size: x-large;
+}
+
+a:hover{
+    background-color: rgb(51, 238, 14);
+    color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
