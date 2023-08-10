@@ -90,6 +90,9 @@ function validacion() {
     	campoMensaje.style.outline = "2px solid #f00";
     	return false;
     } 
+    campoNombre();
+    campoCorreo();
+    campoMensaje();
     guardar();
     console.log("Enviado")
 }
